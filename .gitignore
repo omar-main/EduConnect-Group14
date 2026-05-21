@@ -1,0 +1,14 @@
+# Visual Studio build output
+bin/
+obj/
+
+# Visual Studio cache/options
+.vs/
+*.user
+*.suo
+*.cache
+*.FileListAbsolute.txt
+
+# Local database files (each member runs the SQL setup scripts)
+*.mdf
+*.ldf

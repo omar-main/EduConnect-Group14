@@ -1,0 +1,64 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="EduConnect.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduConnect</title>
+    <%-- Site-wide stylesheets --%>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="quiz.css" />
+    <%-- Each page can inject its own <style> or <link> tags here --%>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <%-- All ASP.NET controls on every page share this single server form --%>
+    <form id="form1" runat="server">
+
+        <%-- ===== HEADER ===== --%>
+        <header>
+            <img src="image.png" alt="EduConnect Logo" width="160" />
+            <h2>EduConnect</h2>
+        </header>
+
+        <%-- ===== NAVIGATION =====
+             Nav items are shown or hidden in Site.Master.cs based on
+             whether the user is logged in and what their Role is.
+        --%>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="StudyMaterials.aspx">Study Materials</a></li>
+                <li><a href="QuizList.aspx">Quizzes</a></li>
+
+                <%-- Shown only when NOT logged in --%>
+                <li id="liRegister" runat="server"><a href="Register.aspx">Register</a></li>
+                <li id="liLogin"    runat="server"><a href="Login.aspx">Login</a></li>
+
+                <%-- Shown only to users with Role = "Admin" --%>
+                <li id="liAdmin"       runat="server"><a href="Admin.aspx">Admin</a></li>
+                <li id="liManageQuiz"  runat="server"><a href="ManageQuiz.aspx">Manage Quizzes</a></li>
+
+                <%-- Shown only when logged in --%>
+                <li id="liWelcome" runat="server"
+                    style="padding:13px 16px; font-size:14px; color:#a8cfff; cursor:default;">
+                    <asp:Literal ID="litWelcome" runat="server" />
+                </li>
+                <li id="liLogout" runat="server"><a href="Logout.aspx">Logout</a></li>
+            </ul>
+        </nav>
+
+        <%-- ===== PAGE BODY (supplied by each individual page) ===== --%>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+        <%-- ===== FOOTER ===== --%>
+        <footer>
+            <p>Copyright 2026 EduConnect. All rights reserved.</p>
+            <p>Last Modified: 31 May 2026</p>
+            <p>Contact us: <a href="mailto:admin@educonnect.com">admin@educonnect.com</a></p>
+        </footer>
+
+    </form>
+</body>
+</html>

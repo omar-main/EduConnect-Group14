@@ -1,0 +1,373 @@
+/* EduConnect - style.css */
+/* Written by a second-year university student */
+
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- Header ---- */
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 14px 25px;
+    overflow: hidden;
+}
+
+/* Logo and site name sit side by side */
+header img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 14px;
+}
+
+header h2 {
+    color: #ffffff;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+/* ---- Navigation ---- */
+nav {
+    background-color: #004080;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 16px;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    background-color: #0066cc;
+}
+
+/* ---- Intro Section ---- */
+#intro {
+    background-color: #ffffff;
+    padding: 28px 25px;
+    border-bottom: 2px solid #003366;
+}
+
+#intro h1 {
+    color: #003366;
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+#intro p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333333;
+    max-width: 750px;
+}
+
+/* ---- Main Two-Column Area ---- */
+#main-area {
+    padding: 25px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+article {
+    width: 63%;
+    float: left;
+    background-color: #ffffff;
+    padding: 20px 22px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+}
+
+article h2 {
+    color: #003366;
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 8px;
+}
+
+article h3 {
+    color: #004080;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+article p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333333;
+}
+
+article ul {
+    margin-left: 20px;
+    line-height: 2;
+    font-size: 14px;
+    color: #333333;
+}
+
+aside {
+    width: 32%;
+    float: right;
+    background-color: #ffffff;
+    padding: 18px 20px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+}
+
+aside h3 {
+    color: #003366;
+    margin-top: 0;
+    font-size: 15px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style-type: disc;
+    margin-left: 18px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+aside a {
+    color: #0055aa;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+aside p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* ---- Registration Section ---- */
+#register {
+    padding: 30px 25px;
+    clear: both;
+    border-top: 2px solid #003366;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#register h2 {
+    color: #003366;
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+#register p {
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #444444;
+}
+
+/* Centre the form box */
+.form-box {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f9f9f9;
+    border: 1px solid #cccccc;
+    padding: 25px 30px;
+}
+
+/* Centre the fields block within the form box */
+.form-box form {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Red asterisk for required fields */
+.required {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* ---- Form ---- */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 14px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    display: block;
+    width: 300px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #999999;
+    background-color: #fafafa;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    outline: none;
+    border-color: #003366;
+    background-color: #ffffff;
+}
+
+form input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 28px;
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0055aa;
+}
+
+/* ---- Inline validation error message (validators) ---- */
+.val-msg {
+    display: block;
+    color: #cc0000;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/* ---- Register page inputs ---- */
+.register-input {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #999999;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin-bottom: 4px;
+}
+
+.register-input:focus {
+    outline: none;
+    border-color: #003366;
+    background-color: #ffffff;
+}
+
+/* Register / Clear button row */
+.register-btn-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-register {
+    padding: 9px 26px;
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.btn-register:hover {
+    background-color: #0055aa;
+}
+
+.btn-clear {
+    padding: 9px 26px;
+    background-color: #888888;
+    color: #ffffff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.btn-clear:hover {
+    background-color: #666666;
+}
+
+/* Register success/error label */
+.register-msg {
+    display: block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Small note above required-field marker */
+.field-note {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+/* "Already have an account?" prompt */
+.login-prompt {
+    margin-top: 14px;
+    font-size: 13px;
+    text-align: center;
+    color: #555555;
+}
+
+.login-prompt a {
+    color: #003366;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* Admin/ManageQuiz form button row (replaces inline display:flex) */
+.form-btn-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+/* ---- Footer ---- */
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 15px;
+    font-size: 13px;
+    clear: both;
+    line-height: 1.9;
+}
+
+footer a {
+    color: #add8ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
